@@ -21,7 +21,14 @@ void printLane(int horsesNum, int* horses){
 	std::cout << std::endl;
 }//end printLane function
 
-//bool isWinner(int horsesNum, int* horses);
+bool isWinner(int horsesNum, int* horses){
+	bool result = false;
+	if (horses[horsesNum] >= MAX){
+		std::cout << "Congradulations Horse " << horsesNum << "!" << std::endl;
+		result = true;
+	}
+	return result;
+}
 
 int main(){
 	int horses[] = {0, 0, 0, 0, 0};
@@ -32,9 +39,9 @@ int main(){
 		for(int i = 0; i < horsesNum; i++){
 			advance(i, horses);
 			printLane(i, horses);
-//			if (isWinnder(i, horses)){
-//				keepGoing = false;
-//			}
+			if (isWinner(i, horses)){
+				keepGoing = false;
+			}
 		}
 		std::cout << "Enter for another turn";
 		std::cin.ignore();
