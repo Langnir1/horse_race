@@ -19,9 +19,10 @@ main();<br/>
 
 Create an array of 5 with values of 0 <br/>
 make keepGoing = True
+srand(time(NULL));
 
 while keepGoing; <br/>
-	run through horse array;
+	run through horse array; 
 	advance horse;
 	print horse lane;
 	if  isWinnner{
@@ -31,7 +32,6 @@ while keepGoing; <br/>
 
 <ins>void advance(int horseNum, int(pointer) horses)</ins>
 
-srand(time(NULL));
 coin = rand() % 1; 
 if(coin == 1){
 <br/>
@@ -39,14 +39,14 @@ add coin to horses position in the array
 
 <ins>void printLane(int horseNum, int(pointer) horses)</ins>
 
-loop from zero to MAX
-	if loop index is equal to the horse's value
+loop from zero to MAX<br/>
+	if loop index is equal to the horse's value 
 		print horse id
 
 
 <ins>bool isWinner(int horseNum, int(pointer) horses)</ins>
 
-bool result = false;
+bool result = false;<br/>
 if horses[horseNum] >= MAX
 	print (congradulations)
 	result = true
